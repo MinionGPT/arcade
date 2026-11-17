@@ -1,0 +1,17 @@
+{
+  "id": "receipt-golf",
+  "number": 10,
+  "title": "Receipt Golf",
+  "visualSteps": [
+    [
+      "fill",
+      "#save",
+      "280"
+    ],
+    [
+      "click",
+      "#golf-form button"
+    ]
+  ],
+  "hookClasses": []
+}

@@ -1,0 +1,23 @@
+/* Cabinet 05 — Night Market. Prefixed house classes only. */
+.nm-machine { display: flex; flex-direction: column; gap: 14px; }
+.nm-start { display: grid; gap: 12px; }
+.nm-bot { display: flex; align-items: center; gap: 10px; }
+.nm-haggle { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+.nm-haggle input { width: auto; }
+.nm-actions { display: flex; gap: 10px; margin-top: 8px; }
+.nm-actions button { flex: 1; }
+.nm-transcript { border: 1px solid var(--line); background: #22221d; padding: 14px; height: 220px; overflow-y: auto; font-size: 13px; }
+.nm-opener { color: var(--muted); font-style: italic; }
+.nm-you { color: var(--paper); }
+.nm-vendor { color: var(--gold); }
+.nm-error { color: #ff9a6a; }
+.nm-status { font: 13px var(--mono); color: var(--muted); margin: 10px 0 0; min-height: 1.4em; }
+.nm-stamp { font: 34px/1 var(--display); text-transform: uppercase; border: 3px double var(--ink); padding: 10px; text-align: center; margin: 14px 0; transform: rotate(-2deg); }
+.nm-stamp-ok { color: var(--ink); background: var(--gold); }
+.nm-stamp-cap { color: var(--ink); border-style: dashed; opacity: .62; }
+.nm-receipt pre { font: 12px/1.4 var(--mono); white-space: pre-wrap; margin: 14px 0; }
+@media (max-width: 720px) {
+  .nm-haggle { grid-template-columns: 1fr; }
+  .nm-actions { flex-direction: column; }
+  .nm-transcript { height: 160px; }
+}

@@ -1,0 +1,56 @@
+/* Cabinet 06 — Trip 777 Scratch. House palette only: ink, cream, one brass. */
+.so-start { display: grid; gap: 14px; }
+.so-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.so-check { display: flex; align-items: center; gap: 10px; min-height: 40px; }
+.so-check > span { margin: 0; }
+.so-check input { width: auto; accent-color: var(--gold); }
+.so-scratch { margin-top: 18px; }
+.so-strip { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); padding: 10px 0; margin-bottom: 14px; }
+.so-lucky { margin: 0; font: 11px var(--mono); letter-spacing: .13em; color: var(--muted); }
+.so-lucky b { display: inline-block; font: 30px/1 var(--display); color: var(--ink); background: var(--gold); padding: 2px 12px; margin-left: 8px; vertical-align: middle; }
+.so-progress { margin: 0; font: 10px var(--mono); letter-spacing: .1em; color: var(--muted); }
+.so-instruction { color: var(--muted); font: 12px var(--mono); margin: 0 0 12px; }
+.so-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 216px; }
+.so-panel {
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  color: #6f6c60;
+  font: 30px/1 var(--display);
+  cursor: pointer;
+  border-radius: 0;
+  min-height: 0;
+  padding: 0;
+  box-shadow: inset 0 0 0 3px #2b2b25;
+  transition: transform .06s ease, background .12s ease;
+}
+.so-panel:hover { transform: scale(1.04); background: #24241f; }
+.so-panel:active { transform: scale(.95); }
+.so-panel.so-revealed {
+  background: var(--paper);
+  color: var(--ink);
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+.so-panel.so-match { background: var(--gold); }
+.so-actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.so-actions button { flex: 1; min-width: 120px; }
+.so-status { font: 12px var(--mono); color: var(--muted); margin: 14px 0 0; min-height: 1.6em; }
+.so-error { margin: 4px 0 0; }
+.so-machine .note { margin-bottom: 0; }
+
+/* The stamp on the receipt. Two classes, one verdict — class names match ui.js. */
+.so-stamp { font: 30px/1 var(--display); text-transform: uppercase; letter-spacing: .04em; border: 3px double var(--ink); padding: 10px 12px; text-align: center; display: inline-block; transform: rotate(-4deg); background: transparent; }
+.so-stamp-ok { background: var(--gold); color: var(--ink); border-color: var(--ink); }
+.so-stamp-cap { background: transparent; color: var(--ink); opacity: .62; border-style: dashed; }
+.so-receipt { border-top: 1px dashed #777365; margin-top: 16px; padding-top: 4px; }
+.so-receipt pre { font: 12px/1.45 var(--mono); white-space: pre-wrap; margin: 12px 0 0; }
+.receipt .so-stamp { margin: 10px 0 4px; }
+.so-verdict-row { border-top: 1px dashed #777365; margin-top: 14px; padding-top: 12px; text-align: center; }
+
+@media (max-width: 720px) {
+  .so-fields { grid-template-columns: 1fr; }
+  .so-grid { width: 100%; }
+  .so-panel { font-size: 34px; }
+}

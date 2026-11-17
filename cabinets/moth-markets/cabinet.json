@@ -1,0 +1,17 @@
+{
+  "id": "moth-markets",
+  "number": 13,
+  "title": "MOTH MARKETS",
+  "visualSteps": [
+    [
+      "fill",
+      "#input",
+      "777"
+    ],
+    [
+      "click",
+      "#play-form button"
+    ]
+  ],
+  "hookClasses": ["mm-stamp-ok", "mm-stamp-cap"]
+}

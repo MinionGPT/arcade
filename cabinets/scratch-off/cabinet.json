@@ -1,0 +1,15 @@
+{
+  "id": "scratch-off",
+  "number": 6,
+  "title": "Trip 777 Scratch",
+  "visualSteps": [
+    [
+      "click",
+      "#startBtn"
+    ],
+    [
+      "click",
+      "#revealBtn"
+    ]
+  ]
+}

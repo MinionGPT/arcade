@@ -1,0 +1,22 @@
+{
+  "name": "minion-arcade",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline cabinets. Real receipts. No build step.",
+  "scripts": {
+    "test": "node scripts/check.js",
+    "test:browser": "node scripts/browser-test.js",
+    "test:visual": "node scripts/visual-run.js",
+    "test:all": "npm test && npm run test:browser && npm run test:visual",
+    "build:floor": "node scripts/build-floor.js",
+    "new:cabinet": "node scripts/new-cabinet.js",
+    "eyes": "node scripts/eyes.js",
+    "prove:red": "node scripts/prove-red.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}

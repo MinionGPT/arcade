@@ -1,0 +1,4 @@
+/* Floor-tile art for Cabinet 04 — Strain Drop. Uses paper-slip style with gold accent. */
+.strain-slip { background: #12120e; color: var(--paper); border: 1px solid var(--gold); transform: rotate(-4deg); }
+.strain-slip strong { font-size: 30px; color: var(--gold); margin: 8px 0; }
+.strain-slip .strain-line { border-top: 1px dashed #2a2a24; padding-top: 8px; margin-top: 8px; }

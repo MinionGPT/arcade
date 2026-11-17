@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The cap department / Minion Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <script src="stamp.js" defer></script>
+  <script src="../../assets/receipt.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 02 / OPINION PRINTER</span></header>
+  <main>
+    <div class="cabinet-heading"><span class="eyebrow">Department of receipts / No authority whatsoever</span><h1>The cap department</h1><p>Big claims need little pieces of paper. Make yours. This does not check facts, browse sources or verify your evidence.</p></div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Stamp controls">
+        <div class="machine-plate">YOU CALL IT. WE JUST PRINT IT.</div>
+        <form id="stamp-form" class="stamp-form">
+          <label for="claim"><span>The claim / max 240 characters</span><textarea id="claim" maxlength="240" required placeholder="My next side project will only take a weekend."></textarea></label>
+          <label for="verdict"><span>Your verdict, not ours</span><select id="verdict"><option value="NOT_CHECKED">NOT CHECKED — I don't know yet</option><option value="NO_CAP">NO CAP — I stand by it</option><option value="CAP">CAP — I call nonsense</option></select></label>
+          <label for="evidence"><span>Your evidence note / optional, max 600</span><textarea id="evidence" maxlength="600" placeholder="What did you actually check? No private info, please."></textarea></label>
+          <button type="submit">STAMP IT ↘</button>
+        </form>
+        <p class="note">Your words stay on this page. Nothing is saved, uploaded or independently verified. Copy a receipt before leaving if you want to keep it.</p>
+        <p id="error" class="error" role="status"></p>
+      </section>
+      <section aria-label="Your opinion receipt">
+        <div id="result" aria-live="polite" aria-atomic="true"><div class="receipt receipt-empty"><div class="ghost" aria-hidden="true">?</div><p>AWAITING YOUR HOT TAKE</p><p>A stamp is not evidence.<br>Even a very convincing stamp.</p></div></div>
+        <div id="receipt-actions" class="receipt-actions" hidden><button id="copyBtn" class="secondary">COPY RECEIPT</button><button id="printBtn" class="secondary">PRINT</button></div>
+        <p id="copy-status" class="error" role="status"></p>
+        <div id="manual-copy" class="output-copy" hidden><label for="copy-text"><span>Clipboard blocked? Select and copy this.</span><textarea id="copy-text" readonly></textarea></label></div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><span>LUCKY MOTH SAYS: SHOW YOUR WORK. THEN TALK.</span><a href="../../index.html">Back to the arcade ↗</a></footer>
+</div>
+</body>
+</html>

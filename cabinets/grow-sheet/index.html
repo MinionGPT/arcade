@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>777 Minion Farms / Minion Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="grow-sheet.css">
+  <script src="engine.js" defer></script>
+  <script src="../../assets/receipt.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body class="gs-page">
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 07 / 777 MINION FARMS</span></header>
+  <main>
+    <div class="cabinet-heading">
+      <span class="eyebrow">Cabinet 07 / A fictional grower, a real receipt</span>
+      <h1>777 Minion Farms</h1>
+      <p>Pick a seed and certify a batch. Strain, lineage, batch code, terpene split, cure days and the THC window all come out of the engine, so the same seed always prints the same sheet. The grower is made up, the lab is made up, the roast is aimed at the idea, not at anybody. Nothing is sent anywhere.</p>
+    </div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Farm controls">
+        <div class="machine-plate">BATCH CERTIFIER &mdash; EVERY NUMBER FROM THE ENGINE</div>
+        <form id="certify-form" class="stamp-form">
+          <label for="seed"><span>Seed / keep the digits, keep the batch</span><input id="seed" type="text" inputmode="numeric" pattern="[0-9]{1,32}" maxlength="32" value="777" required autocomplete="off" spellcheck="false"></label>
+          <button id="certifyBtn">CERTIFY BATCH &nearr;</button>
+        </form>
+        <p id="error" class="error" role="status"></p>
+        <p class="note">The stamp is a rule, not a mood: NO CAP only when the cure ran 14 days or longer and the first listed terpene holds 15% or more. Everything else is CAP. The moth does not negotiate.</p>
+        <details open>
+          <summary>GOT A RECEIPT? REPLAY THE BATCH.</summary>
+          <form id="replay-form" class="ticket-form">
+            <label for="ticket"><span>Versioned replay ticket</span><input id="ticket" maxlength="36" placeholder="GS1-777" autocomplete="off" spellcheck="false" required></label>
+            <button class="secondary">REPRINT BATCH &nearr;</button>
+          </form>
+          <p class="note">Tickets are editable, not signed. Reprinting is not lab evidence. On another computer, paste the ticket into its copy of the arcade; a local file link only works on this machine.</p>
+        </details>
+      </section>
+      <section aria-label="Batch certificate">
+        <div class="receipt" id="sheet">
+          <div class="gs-document"><span>FIELD RECORD / FICTIONAL</span><span>GS1</span></div>
+          <div class="receipt-head"><strong id="sheet-title">777 MINION FARMS</strong><small id="sheet-sub">BATCH CERTIFICATE &middot; BANGKOK &middot; TRIP 777 / 420</small></div>
+          <p class="ticket-id" id="sheet-code">777-????</p>
+          <span class="gs-label">01 / HARVEST RECORD</span>
+          <dl id="sheet-rows"></dl>
+          <span class="gs-label">02 / TERPENE SPLIT &mdash; FICTIONAL %</span>
+          <ul id="sheet-terps" class="gs-terps"></ul>
+          <dl id="sheet-tail"></dl>
+          <blockquote id="sheet-roast">Certifying.</blockquote>
+          <div class="gs-stamp gs-cap" id="sheet-stamp">CAP</div>
+          <p class="gs-replay">REPLAY / <strong id="sheet-replay">GS1-777</strong></p>
+          <p class="fine-print" id="sheet-fine">Seed: 777 &middot; Fictional product &mdash; not a real strain, not a real lab, no prices.</p>
+        </div>
+        <div class="receipt-actions">
+          <button id="copyBtn" class="secondary" type="button">COPY RECEIPT</button>
+          <button id="printBtn" class="secondary" type="button">PRINT</button>
+        </div>
+        <p id="copy-status" class="error" role="status"></p>
+        <div id="manual-copy" class="output-copy" hidden>
+          <label for="copy-text"><span>Clipboard blocked? Select and copy this.</span><textarea id="copy-text" readonly></textarea></label>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><span>LUCKY MOTH SAYS: IF THE LAB ASKS FOR A LAWYER, THE BATCH IS CAP.</span><a href="../../index.html">Back to the arcade &nearr;</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pigeon Race / Cabinet 11</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="pigeon-race.css">
+  <script src="engine.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 11 / PIGEON RACE</span></header>
+  <main>
+    <div class="cabinet-heading"><span class="eyebrow">Cabinet 11 / the house keeps fifteen percent</span><h1>Pigeon Race</h1><p>Eight fictional Bangkok lofts, one seeded race per seed. Pick a bird, stake some pretend baht, and the receipt tells you whether it flew first.</p></div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Pigeon race controls">
+        <div class="machine-plate">ONE BIRD. ONE STAKE. ONE STAMP.</div>
+        <form id="race-form" class="stamp-form">
+          <label for="bird"><span>The bird</span><select id="bird"></select></label>
+          <label for="stake"><span>Stake, in pretend baht</span><input id="stake" type="number" min="1" max="100" step="1" value="10" required></label>
+          <label for="seed"><span>Race number</span><input id="seed" type="text" inputmode="numeric" value="777"></label>
+          <button type="submit">BOOK THE BET ↘</button>
+        </form>
+        <p class="note">Fictional lofts, fictional birds, fictional money. The house edge is 15% and it is arithmetic, not a slogan.</p>
+        <p id="error" class="error" role="status"></p>
+      </section>
+      <section aria-label="Pigeon race receipt" aria-live="polite" aria-atomic="true">
+        <div id="result"><div class="receipt receipt-empty"><div class="ghost" aria-hidden="true">777</div><p>RECEIPT PRINTER READY</p><p>Pick a bird and book it. The house has opinions.</p></div></div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><span>PIGEON RACE 777 * SEED = SAME RACE EVERY TIME * NO REAL MONEY</span><a href="../../index.html">Back to the arcade ↗</a></footer>
+</div>
+</body>
+</html>

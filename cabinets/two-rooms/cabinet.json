@@ -1,0 +1,11 @@
+{
+  "id": "two-rooms",
+  "number": 9,
+  "title": "Two Rooms Over",
+  "visualSteps": [
+    ["click", "[data-room=\"css\"]"],
+    ["click", "#answer-btn"],
+    ["wait", "#verdict-tell"]
+  ],
+  "hookClasses": ["tr-stamp-ok", "tr-stamp-cap", "tr-room-on"]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLATE 777 / Minion Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="plate.css">
+  <script src="engine.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 12 / PLATE 777</span></header>
+  <main>
+    <div class="cabinet-heading"><span class="eyebrow">Cabinet 12 / lucky plate auction oracle</span><h1>PLATE 777</h1><p>Read any plate. The house reads the digits — every point is a rule in the code.</p></div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Toy controls">
+        <form id="play-form" class="stamp-form"><label for="input"><span>Your plate</span><input id="input" maxlength="40" placeholder="777 / 2BKK 1234" required></label><button>READ THE PLATE ↘</button></form>
+        <p id="error" class="error" role="status"></p>
+      </section>
+      <section class="receipt" aria-label="Toy output" aria-live="polite">
+        <div class="receipt-head"><strong id="output-title">WAITING ON A PLATE</strong></div>
+        <p id="output-line">Type any plate. The pass line is a number in the code.</p>
+        <ul id="output-rows" class="p7-rows"></ul>
+        <span id="output-stamp" class="p7-stamp p7-stamp-cap">STAMP: CAP</span>
+        <blockquote id="output-roast">Five rules, one score, one stamp. No vibes, no typed verdicts.</blockquote>
+        <div id="p7-receipt-actions" class="receipt-actions" hidden>
+          <button id="copy-btn" class="secondary" type="button">COPY RECEIPT</button>
+          <button id="copy-receipt-link" class="secondary" type="button">COPY REPLAY LINK</button>
+        </div>
+        <p id="copy-status" class="error" role="status"></p>
+        <div id="manual-copy" class="output-copy" hidden>
+          <label for="copy-receipt"><span>Clipboard blocked? Select and copy this.</span><textarea id="copy-receipt" readonly></textarea></label>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</body>
+</html>

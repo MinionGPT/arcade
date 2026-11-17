@@ -1,0 +1,11 @@
+{
+  "id": "beat-booth",
+  "number": 3,
+  "title": "Beat Booth",
+  "visualSteps": [],
+  "hookClasses": [
+    "bb-preset",
+    "bb-bpm",
+    "bb-swing"
+  ]
+}

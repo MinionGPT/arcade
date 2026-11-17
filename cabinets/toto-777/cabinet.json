@@ -1,0 +1,12 @@
+{
+  "id": "toto-777",
+  "number": 8,
+  "title": "Toto 777",
+  "visualSteps": [
+    ["fill", "#seed", "777"],
+    ["fill", "#ticket", "23"],
+    ["click", "#draw-btn"],
+    ["wait", "#draw-drum"]
+  ],
+  "hookClasses": ["tt-stamp-ok", "tt-stamp-cap"]
+}

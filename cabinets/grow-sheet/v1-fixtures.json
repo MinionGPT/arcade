@@ -1,0 +1,106 @@
+[
+  {
+    "seed": "777",
+    "strain": "Moth Wing",
+    "lineage": "Thai Stick × Gelato",
+    "batch": "777-MB5E",
+    "harvested": "2026-08-28",
+    "cure": 22,
+    "terps": [
+      [
+        "pinene",
+        12
+      ],
+      [
+        "limonene",
+        2
+      ],
+      [
+        "myrcene",
+        86
+      ]
+    ],
+    "thc_low": 21,
+    "thc_high": 26,
+    "roast": "Tastes like Bangkok traffic at 8am — harsh, slow, unavoidable.",
+    "stamp": "CAP"
+  },
+  {
+    "seed": "0",
+    "strain": "Lucky Moth",
+    "lineage": "Skunk × Purple Thai",
+    "batch": "777-W2WR",
+    "harvested": "2026-09-22",
+    "cure": 33,
+    "terps": [
+      [
+        "linalool",
+        22
+      ],
+      [
+        "pinene",
+        3
+      ],
+      [
+        "myrcene",
+        75
+      ]
+    ],
+    "thc_low": 17,
+    "thc_high": 23,
+    "roast": "Lab results came back and asked for a lawyer.",
+    "stamp": "NO CAP"
+  },
+  {
+    "seed": "0007",
+    "strain": "Night Market",
+    "lineage": "Gelato × Cookie",
+    "batch": "777-Y7WL",
+    "harvested": "2026-09-21",
+    "cure": 19,
+    "terps": [
+      [
+        "limonene",
+        40
+      ],
+      [
+        "pinene",
+        8
+      ],
+      [
+        "myrcene",
+        52
+      ]
+    ],
+    "thc_low": 15,
+    "thc_high": 20,
+    "roast": "Cured in a shoe box. You can taste the cardboard.",
+    "stamp": "NO CAP"
+  },
+  {
+    "seed": "420",
+    "strain": "Bangkok Haze",
+    "lineage": "Thai Stick × NL5",
+    "batch": "777-MVLA",
+    "harvested": "2026-09-24",
+    "cure": 22,
+    "terps": [
+      [
+        "myrcene",
+        31
+      ],
+      [
+        "pinene",
+        46
+      ],
+      [
+        "linalool",
+        23
+      ]
+    ],
+    "thc_low": 15,
+    "thc_high": 21,
+    "roast": "Lab results came back and asked for a lawyer.",
+    "stamp": "NO CAP"
+  }
+]

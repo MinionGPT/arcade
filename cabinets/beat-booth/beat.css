@@ -1,0 +1,74 @@
+/* Beat Booth. Tokens come from assets/arcade.css; every var() has a fallback so this page still works alone. */
+.bb-page { background: var(--bg, #171714); color: var(--paper, #f1e9d6); font: 15px/1.6 var(--mono, Menlo, Consolas, monospace); }
+.bb { display: grid; gap: 40px; padding: 8px 0 64px; }
+
+/* the deck */
+.bb-deck { border: 1px solid var(--line, #47463d); padding: 22px; background: #1b1b17; }
+.bb-transport { display: grid; grid-template-columns: auto minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) auto; gap: 18px; align-items: end; margin-bottom: 26px; }
+.bb-field span { display: flex; justify-content: space-between; }
+.bb-field output { color: var(--gold, #e9be46); letter-spacing: 0; }
+.bb-field input[type=range] { padding: 0; height: 48px; accent-color: var(--gold, #e9be46); background: transparent; border: 0; }
+.bb-field select { height: 48px; }
+.bb-play { min-width: 112px; letter-spacing: .14em; }
+.bb-play[aria-pressed=true] { background: var(--paper, #f1e9d6); border-color: var(--paper, #f1e9d6); }
+
+.bb-grid { display: grid; gap: 10px; }
+.bb-row { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 12px; align-items: center; }
+.bb-label { font-size: 10px; letter-spacing: .13em; color: var(--muted, #aaa697); }
+button.bb-label { min-height: 34px; padding: 6px 0; border: 0; background: transparent; justify-content: flex-start; font-weight: normal; text-align: left; }
+button.bb-label:hover { background: transparent; color: var(--paper, #f1e9d6); }
+button.bb-label[aria-pressed=true] { color: #8e8a7b; text-decoration: line-through; }
+.bb-row.muted .bb-pad.on { background: #3a392f; border-color: #3a392f; }
+.bb-pads { display: flex; gap: 12px; }
+.bb-group { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.bb-steps .bb-group span { text-align: center; font-size: 9px; color: #8e8a7b; padding-bottom: 2px; }
+.bb-steps .bb-group span.now { color: var(--gold, #e9be46); font-weight: bold; }
+
+.bb-pad { min-height: 0; padding: 0; aspect-ratio: 1 / 1.08; background: #24241f; border: 1px solid #3a392f; color: transparent; transition: background .06s, transform .06s; touch-action: none; }
+.bb-group:nth-child(odd) .bb-pad:not(.on) { background: #2a2a24; }
+.bb-pad:hover { background: #34332a; border-color: #8e8a7b; }
+.bb-pad.on { background: var(--gold, #e9be46); border-color: var(--gold, #e9be46); box-shadow: inset 0 0 0 3px #171714; }
+.bb-pad.now { border-color: var(--paper, #f1e9d6); background: #3d3b30; }
+.bb-pad.on.now { background: var(--paper, #f1e9d6); border-color: var(--paper, #f1e9d6); transform: translateY(-2px); }
+.bb-hint { margin: 18px 0 0; font-size: 11px; color: var(--muted, #aaa697); }
+
+/* the ticket: thermal paper, ink, one stamp */
+.bb-ticket { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 48px; max-width: 920px; width: 100%; justify-self: center; background: var(--paper, #f1e9d6); color: #171714; padding: 26px 28px 32px; position: relative; box-shadow: 5px 6px 0 #0b0b09; overflow-wrap: anywhere; }
+.bb-ticket::after { content: ''; height: 8px; position: absolute; bottom: -7px; left: 0; right: 0; background: linear-gradient(135deg, var(--paper, #f1e9d6) 25%, transparent 25%) -8px 0/16px 16px, linear-gradient(225deg, var(--paper, #f1e9d6) 25%, transparent 25%) -8px 0/16px 16px; }
+.bb-ticket-head { grid-column: 1 / -1; margin-bottom: 8px; text-align: center; border-bottom: 1px dashed #777365; padding-bottom: 14px; }
+.bb-ticket-head strong { display: block; font: 30px/1 var(--display, Impact, 'Arial Narrow', sans-serif); letter-spacing: .06em; }
+.bb-ticket-head small { display: block; margin-top: 8px; font-size: 9px; letter-spacing: .08em; }
+.bb-rows { grid-column: 1; grid-row: 2 / span 3; margin: 16px 0 6px; font: 11px/1.7 var(--mono, Menlo, Consolas, monospace); white-space: pre; overflow-x: auto; }
+.bb-verdict { grid-column: 2; margin-top: 22px; border: 3px double #171714; font: 40px/1 var(--display, Impact, 'Arial Narrow', sans-serif); text-transform: uppercase; text-align: center; padding: 12px; margin-bottom: 14px; transform: rotate(-3deg); letter-spacing: .02em; }
+.bb-verdict.nocap { background: var(--gold, #e9be46); }
+.bb-verdict.cap { background-image: repeating-linear-gradient(135deg, transparent 0 7px, rgba(23,23,20,.16) 7px 9px); }
+.bb-line { grid-column: 2; font-size: 13px; margin: 0 0 18px; min-height: 3.2em; }
+.bb-barcode { grid-column: 2; height: 44px; margin: 0 0 18px; }
+.bb-barcode svg { display: block; width: 100%; height: 100%; }
+.bb-barcode rect { fill: #171714; }
+.bb-code { grid-column: 1 / -1; border-top: 1px dashed #777365; padding-top: 16px; }
+.bb-code label { font-size: 10px; letter-spacing: .13em; text-transform: uppercase; margin-bottom: 6px; }
+.bb-code input { background: #fffaf0; color: #171714; border-color: #777365; font-size: 12px; }
+.bb-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.bb-actions button { min-height: 40px; padding: 8px 12px; font-size: 11px; letter-spacing: .06em; }
+.bb-ticket button.secondary { color: #171714; border-color: #171714; }
+.bb-ticket button.secondary:hover { background: #171714; color: var(--paper, #f1e9d6); }
+.bb-ticket button:not(.secondary) { background: #171714; border-color: #171714; color: var(--paper, #f1e9d6); }
+.bb-ticket button:not(.secondary):hover { background: var(--gold, #e9be46); color: #171714; border-color: #171714; }
+.bb-status { min-height: 2.6em; margin: 12px 0 0; font-size: 11px; }
+
+@media (max-width: 900px) {
+  .bb-ticket { grid-template-columns: 1fr; }
+  .bb-rows, .bb-verdict, .bb-line, .bb-barcode, .bb-code { grid-column: 1; grid-row: auto; }
+  .bb-verdict { margin: 18px 6px 14px; }
+  .bb-transport { grid-template-columns: 1fr 1fr; }
+  .bb-play, #clear { width: 100%; }
+}
+@media (max-width: 560px) {
+  .bb-deck { padding: 14px; }
+  .bb-row { grid-template-columns: 1fr; gap: 4px; }
+  .bb-steps { display: none; }
+  .bb-pads { flex-wrap: wrap; gap: 6px; }
+  .bb-group { flex: 1 1 calc(50% - 6px); }
+  .bb-pad { aspect-ratio: auto; height: 38px; min-width: 0; }
+}

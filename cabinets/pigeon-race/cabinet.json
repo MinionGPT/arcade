@@ -1,0 +1,17 @@
+{
+  "id": "pigeon-race",
+  "number": 11,
+  "title": "Pigeon Race",
+  "visualSteps": [
+    [
+      "fill",
+      "#stake",
+      "100"
+    ],
+    [
+      "click",
+      "#race-form button"
+    ]
+  ],
+  "hookClasses": []
+}

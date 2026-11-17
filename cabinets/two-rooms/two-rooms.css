@@ -1,0 +1,90 @@
+/* Cabinet 09 — Two Rooms Over. House palette only: ink, cream, one brass. */
+.tr-symptom {
+  font: 15px/1.55 var(--mono);
+  color: var(--paper);
+  background: #0c0c0a;
+  border-left: 3px solid var(--gold);
+  margin: 0 0 12px;
+  padding: 16px 18px;
+}
+.tr-source { color: var(--muted); font-size: 11px; letter-spacing: .04em; margin: 0 0 18px; min-height: 1.4em; }
+
+/* Two decks of eight. A link, not a button: it navigates, so it keeps its 44px target anyway. */
+.tr-decks { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.tr-deck {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  font: 11px/1.3 var(--mono);
+  letter-spacing: .06em;
+  text-decoration: none;
+  color: var(--paper);
+  background: #22221d;
+  border: 1px solid #777365;
+}
+.tr-deck:hover { border-color: var(--paper); }
+.tr-deck.tr-deck-on { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+
+.tr-form { display: grid; gap: 14px; }
+.tr-rooms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tr-room {
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  text-align: left;
+  min-height: 56px;
+  padding: 10px 12px;
+  background: #22221d;
+  color: var(--paper);
+  border: 1px solid #777365;
+  font: 12px/1.35 var(--mono);
+}
+.tr-room b { font: 16px/1.1 var(--display); letter-spacing: .06em; color: var(--paper); }
+.tr-room small { color: #efe9da; font-size: 10px; letter-spacing: .02em; }
+.tr-room:hover { background: #2c2c25; border-color: var(--paper); }
+/* Selected beats hover: `.tr-room:hover` is two class-level selectors, so the selected state
+ * has to match that weight or the pointer erases the choice while you look at it. */
+.tr-room.tr-room-on, .tr-room.tr-room-on:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.tr-room.tr-room-on b, .tr-room.tr-room-on small { color: var(--ink); }
+.tr-room[disabled] { opacity: .55; cursor: default; }
+.tr-room-on[disabled] { opacity: 1; }
+.tr-form #answer-btn { width: 100%; }
+
+.receipt .tr-verdict { font: 14px/1.5 var(--mono); margin: 4px 0 10px; }
+.receipt .tr-room-line { font: 12px/1.5 var(--mono); letter-spacing: .03em; margin: 0 0 10px; color: var(--ink); border-top: 1px dashed #777365; padding-top: 8px; }
+.receipt .tr-tell { font: 12px/1.5 var(--mono); color: #57534a; margin: 0 0 12px; }
+.receipt .tr-final {
+  font: 11px/1.45 var(--mono);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 12px;
+  margin: 14px 0 0;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* On the cream receipt, muted grey is a ghost: dark ochre for the small print. */
+.receipt .tr-source { color: #57534a; }
+
+/* The stamp. Two classes, one verdict — class names match ui.js. */
+.tr-stamp { font: 26px/1 var(--display); text-transform: uppercase; letter-spacing: .04em; border: 3px double var(--ink); padding: 9px 12px; text-align: center; display: inline-block; transform: rotate(-4deg); background: transparent; color: var(--ink); opacity: .62; border-style: dashed; }
+.tr-stamp-ok { background: var(--gold); color: var(--ink); border-color: var(--gold); opacity: 1; border-style: double; }
+.tr-stamp-cap { background: transparent; color: var(--ink); border-color: var(--ink); opacity: .7; border-style: dashed; }
+
+@media (max-width: 720px) {
+  /* A receipt is a wide object. minmax(0, 1fr) lets the column obey the screen and lets the
+   * pre scroll inside it instead of pushing the whole floor sideways. */
+  .play-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .tr-rooms { grid-template-columns: 1fr; }
+}
+@media (max-width: 360px) {
+  .shell { padding: 8px; }
+  .machine, .receipt { padding: 14px; }
+  .machine-plate { font-size: 9px; letter-spacing: .04em; }
+  .tr-symptom { font-size: 13px; padding: 12px; }
+}

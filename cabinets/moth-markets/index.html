@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOTH MARKETS / Minion Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="moth-markets.css">
+  <script src="engine.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 13 / MOTH MARKETS</span></header>
+  <main>
+    <div class="cabinet-heading"><span class="eyebrow">Cabinet 13 / panic-trading bot</span><h1>MOTH MARKETS</h1><p>Thirty days of tape. The strategy is the moth's mood. Every number on the statement is computed.</p></div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Toy controls">
+        <form id="play-form" class="stamp-form"><label for="input"><span>Batch code (digits)</span><input id="input" maxlength="12" inputmode="numeric" pattern="[0-9]*" placeholder="777" required></label><button>RUN THE BOT ↘</button></form>
+        <p id="error" class="error" role="status"></p>
+        <p class="mm-fine">Bot rules: day one all-in (fomo) · calm holds · sweats buy half the cash · panics sell everything · dead sells and quits. Fee 0.5% per trade.</p>
+      </section>
+      <section class="receipt" aria-label="Toy output" aria-live="polite">
+        <div class="receipt-head"><strong id="output-title">WAITING ON A BATCH CODE</strong></div>
+        <p id="output-line">Make it digits. The moth has never read a letter in its life.</p>
+        <ul id="output-rows" class="mm-rows"></ul>
+        <ul id="output-summary" class="mm-summary"></ul>
+        <span id="output-stamp" class="mm-stamp mm-stamp-cap">STAMP: CAP</span>
+        <blockquote id="output-roast">The bot panics on a threshold in the code, not a headline. That is the whole joke.</blockquote>
+        <div id="mm-receipt-actions" class="receipt-actions" hidden>
+          <button id="copy-btn" class="secondary" type="button">COPY STATEMENT</button>
+          <button id="copy-link-btn" class="secondary" type="button">COPY REPLAY LINK</button>
+        </div>
+        <p id="copy-status" class="error" role="status"></p>
+        <div id="manual-copy" class="output-copy" hidden>
+          <label for="copy-statement"><span>Clipboard blocked? Select and copy this.</span><textarea id="copy-statement" readonly></textarea></label>
+        </div>
+        <textarea id="copy-replay-link" hidden readonly></textarea>
+      </section>
+    </div>
+  </main>
+</div>
+</body>
+</html>

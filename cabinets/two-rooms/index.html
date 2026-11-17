@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two Rooms Over / Minion Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="two-rooms.css">
+  <script src="engine.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 09 / TWO ROOMS OVER</span></header>
+  <main>
+    <div class="cabinet-heading">
+      <span class="eyebrow">Cabinet 09 / sixteen bugs I actually shipped, in two decks. Every quote is from my own notes.</span>
+      <h1>Two Rooms Over</h1>
+      <p>Read the symptom. Name the room the bug lived in: engine, DOM, stylesheet, markup or my own test suite. The note always points at the symptom, never at the bug. Nothing is sent anywhere.</p>
+    </div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Case file controls">
+        <div class="tr-decks" role="group" aria-label="Case decks">
+          <a id="deck-1" class="tr-deck tr-deck-on" href="index.html?seed=777&amp;deck=1" aria-current="page">DECK 1 · EIGHT BUGS</a>
+          <a id="deck-2" class="tr-deck" href="index.html?seed=777&amp;deck=2">DECK 2 · EIGHT MORE</a>
+        </div>
+        <div class="machine-plate" id="case-plate">CASE 01 / 08 — FIVE ROOMS, ONE BUG</div>
+        <blockquote id="case-symptom" class="tr-symptom">Loading the case file.</blockquote>
+        <p id="case-source" class="tr-source"></p>
+        <form id="answer-form" class="tr-form">
+          <div id="room-buttons" class="tr-rooms" role="group" aria-label="Rooms the bug could live in"></div>
+          <button id="answer-btn" type="submit">STAMP THE CASE ↘</button>
+        </form>
+        <p id="error" class="error" role="status"></p>
+        <p class="note">A room is a place a bug lives, not a place a note points. Cases are dealt from the seed, so the same seed is the same eight cases.</p>
+      </section>
+      <section class="receipt" aria-label="Case verdict receipt" aria-live="polite">
+        <div class="receipt-head"><strong id="verdict-title">NO CASE OPEN</strong></div>
+        <p id="verdict-line" class="tr-verdict">Read the symptom. Pick the room.</p>
+        <p id="verdict-room" class="tr-room-line"></p>
+        <p id="verdict-tell" class="tr-tell"></p>
+        <span id="verdict-stamp" class="tr-stamp tr-stamp-cap" hidden>STAMP: CAP</span>
+        <p id="verdict-evidence" class="tr-source"></p>
+        <div id="verdict-actions" class="receipt-actions">
+          <button id="next-btn" type="button" disabled>NEXT CASE →</button>
+        </div>
+        <pre id="final-receipt" class="tr-final" hidden></pre>
+        <div id="final-actions" class="receipt-actions" hidden>
+          <a id="new-deck" class="button" href="index.html?seed=778">DEAL A NEW DECK ↺</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><span>TWO ROOMS OVER SAYS: THE NOTE POINTS AT THE SYMPTOM. ALWAYS HAS.</span><a href="../../index.html">Back to the arcade &nearr;</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* Cabinet 10 paint: the stamp gets brass when the batch is saved clean (NO CAP). */
+.rg-stamp-no-cap {
+  background: var(--gold);
+  color: #10100e;
+  border-color: var(--gold);
+  transform: rotate(-6deg);
+}
+
+.rg-stamp-cap {
+  background: transparent;
+  color: var(--ink);
+  transform: rotate(-6deg);
+}
+
+.rg-stamp-walk {
+  background: transparent;
+  color: #777365;
+  transform: rotate(-6deg);
+}

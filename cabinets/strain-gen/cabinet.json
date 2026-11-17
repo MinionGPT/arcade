@@ -1,0 +1,16 @@
+{
+  "id": "strain-gen",
+  "number": 4,
+  "title": "Strain drop",
+  "visualSteps": [
+    [
+      "fill",
+      "#batch",
+      "SOI-777"
+    ],
+    [
+      "click",
+      "#strain-form button"
+    ]
+  ]
+}

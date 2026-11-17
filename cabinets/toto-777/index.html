@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toto 777 / Minion Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="toto.css">
+  <script src="engine.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 08 / TOTO 777</span></header>
+  <main>
+    <div class="cabinet-heading">
+      <span class="eyebrow">Cabinet 08 / Bangkok lottery. The drum is seeded, so the same seed is the same draw every time.</span>
+      <h1>Toto 777</h1>
+      <p>Pick a number from 1 to 96. The machine draws six from a seeded drum. Match and the house pays in pretend baht. Nothing is sent anywhere.</p>
+    </div>
+    <div class="play-layout">
+      <section class="machine tt-machine" aria-label="Lottery controls">
+        <div class="machine-plate">DRUM 96 &mdash; DRAW 6 &mdash; PAYS IN PRETEND BAHT</div>
+        <form id="draw-form" class="tt-form">
+          <label for="seed"><span>Drum seed</span><input id="seed" type="number" min="0" step="1" value="777" required></label>
+          <label for="ticket"><span>Your number</span><input id="ticket" type="text" inputmode="numeric" pattern="[1-9][0-9]?" maxlength="2" value="23" required autocomplete="off" spellcheck="false"></label>
+          <button id="draw-btn" type="submit">DRAW ↘</button>
+        </form>
+        <div class="tt-actions">
+          <button id="pick-btn" class="secondary" type="button">PICK A NUMBER ↺</button>
+        </div>
+        <p class="tt-instruction">Same seed, same drum. Different seed, different draw. The drum never lies; the house just keeps the rest.</p>
+        <p id="error" class="error" role="status"></p>
+      </section>
+      <section class="receipt" aria-label="Lottery receipt" aria-live="polite">
+        <div class="receipt-head"><strong id="draw-title">WAITING ON THE DRUM</strong></div>
+        <p id="draw-ticket" class="receipt-line">Pick a number and draw the drum.</p>
+        <pre id="draw-drum"></pre>
+        <p id="draw-matches"></p>
+        <p id="draw-prize"></p>
+        <span id="draw-stamp" class="tt-stamp tt-stamp-cap">STAMP: CAP</span>
+        <p id="draw-roast"></p>
+        <div id="draw-receipt-actions" class="receipt-actions" hidden>
+          <button id="copy-btn" class="secondary" type="button">COPY RECEIPT</button>
+          <button id="copy-receipt-link" class="secondary" type="button">COPY REPLAY LINK</button>
+        </div>
+        <p id="copy-status" class="error" role="status"></p>
+        <div id="manual-copy" class="output-copy" hidden>
+          <label for="copy-receipt"><span>Clipboard blocked? Select and copy this.</span><textarea id="copy-receipt" readonly></textarea></label>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><span>TOTO 777 SAYS: THE DRUM IS SEEDED. BELIEVE IT OR LOSE IT.</span><a href="../../index.html">Back to the arcade &nearr;</a></footer>
+</div>
+</body>
+</html>

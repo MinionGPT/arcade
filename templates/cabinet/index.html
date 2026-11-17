@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Borrowed luck / Cabinet template</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <script src="engine.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">TEMPLATE / NOT A FLOOR CABINET</span></header>
+  <main>
+    <div class="cabinet-heading"><span class="eyebrow">Working example / replace with your own game</span><h1>Borrowed luck</h1><p>The moth accepts plans, not promises.</p></div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Toy controls">
+        <form id="play-form" class="stamp-form"><label for="input"><span>Your plan</span><input id="input" maxlength="80" required></label><button>ASK THE MOTH ↘</button></form>
+        <p id="error" class="error" role="status"></p>
+      </section>
+      <section class="receipt" aria-label="Toy output" aria-live="polite">
+        <div class="receipt-head"><strong id="output-title">WAITING ON YOU</strong></div>
+        <p id="output-line">Make it a good one.</p><blockquote id="output-roast">Replace this roast with a line only your cabinet would say.</blockquote>
+      </section>
+    </div>
+  </main>
+</div>
+</body>
+</html>

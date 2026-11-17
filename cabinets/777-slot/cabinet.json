@@ -1,0 +1,15 @@
+{
+  "id": "777-slot",
+  "number": 1,
+  "title": "Trip 777",
+  "visualSteps": [
+    [
+      "click",
+      "#spinBtn"
+    ],
+    [
+      "idle",
+      "#spinBtn"
+    ]
+  ]
+}

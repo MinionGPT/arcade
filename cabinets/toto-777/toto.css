@@ -1,0 +1,30 @@
+/* Cabinet 08 — Toto 777. House palette only: ink, cream, one brass. */
+.tt-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: end; }
+.tt-form label { display: grid; gap: 4px; }
+.tt-form input { width: 100%; }
+.tt-form #draw-btn { grid-column: 1 / -1; width: 100%; }
+.tt-actions { margin-top: 14px; }
+.tt-actions button { width: 100%; }
+.tt-instruction { color: var(--muted); font: 12px var(--mono); margin: 14px 0 0; }
+.tt-machine .note { margin-bottom: 0; }
+
+/* The stamp on the receipt. Two classes, one verdict — class names match ui.js. */
+.tt-stamp { font: 30px/1 var(--display); text-transform: uppercase; letter-spacing: .04em; border: 3px double var(--ink); padding: 10px 12px; text-align: center; display: inline-block; transform: rotate(-4deg); background: transparent; color: var(--ink); opacity: .62; border-style: dashed; }
+.tt-stamp-ok { background: var(--gold); color: var(--ink); border-color: var(--ink); opacity: 1; border-style: double; }
+.tt-stamp-cap { background: transparent; color: var(--ink); opacity: .62; border-style: dashed; }
+
+.receipt .tt-stamp { margin: 10px 0 4px; }
+.receipt .receipt-line { font: 13px/1.5 var(--mono); margin: 4px 0; }
+.receipt .receipt-roast { font: 12px/1.4 var(--mono); color: var(--muted); margin: 10px 0 0; border-top: 1px dashed #777365; padding-top: 8px; }
+.receipt #draw-drum { font: 18px/1.4 var(--display); margin: 8px 0; letter-spacing: .04em; }
+
+@media (max-width: 720px) {
+  .tt-form { grid-template-columns: 1fr; }
+  .tt-form #draw-btn { grid-column: auto; }
+}
+@media (max-width: 360px) {
+  .shell { padding: 8px; }
+  .machine, .receipt { padding: 14px; }
+  .machine-plate { font-size: 9px; letter-spacing: .04em; }
+  .tt-form input { font-size: 14px; }
+}

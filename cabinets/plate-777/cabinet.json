@@ -1,0 +1,17 @@
+{
+  "id": "plate-777",
+  "number": 12,
+  "title": "PLATE 777",
+  "visualSteps": [
+    [
+      "fill",
+      "#input",
+      "777"
+    ],
+    [
+      "click",
+      "#play-form button"
+    ]
+  ],
+  "hookClasses": ["p7-stamp-ok", "p7-stamp-cap"]
+}

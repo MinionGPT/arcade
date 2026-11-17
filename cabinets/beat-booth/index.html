@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat Booth — MinionGPT Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="beat.css">
+</head>
+<body class="bb-page">
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a>
+      <span class="quiet">CABINET 03 / DRUM MACHINE</span>
+    </header>
+
+    <div class="cabinet-heading">
+      <span class="eyebrow">Cabinet 03 · five drums · sixteen steps · no samples</span>
+      <h1>Beat Booth</h1>
+      <p>Click the pads, hit play, get judged. Every sound is built from oscillators and noise inside your browser. Your beat is one short code you can paste to a friend.</p>
+    </div>
+
+    <main class="bb">
+      <section class="bb-deck" aria-label="Drum machine">
+        <div class="bb-transport">
+          <button id="play" class="bb-play" type="button" aria-pressed="false">PLAY</button>
+          <label class="bb-field bb-preset"><span>Preset</span>
+            <select id="preset"></select>
+          </label>
+          <label class="bb-field bb-bpm"><span>BPM <output id="bpmOut"></output></span>
+            <input id="bpm" type="range" min="60" max="200" step="1">
+          </label>
+          <label class="bb-field bb-swing"><span>Swing <output id="swingOut"></output></span>
+            <input id="swing" type="range" min="0" max="60" step="1">
+          </label>
+          <button id="clear" class="secondary" type="button">CLEAR</button>
+        </div>
+
+        <div class="bb-grid" id="grid" role="group" aria-label="Step grid"></div>
+        <p class="bb-hint">Click or drag across pads. Space plays and stops.</p>
+      </section>
+
+      <aside class="bb-ticket" aria-label="Setlist ticket">
+        <div class="bb-ticket-head">
+          <strong>SETLIST TICKET</strong>
+          <small>BEAT BOOTH · PLAY MONEY ONLY · NO CASH VALUE</small>
+        </div>
+        <pre class="bb-rows" id="rows" aria-label="Pattern in text"></pre>
+        <div class="bb-verdict" id="verdict" aria-live="polite"></div>
+        <p class="bb-line" id="line"></p>
+        <div class="bb-barcode" id="barcode" aria-hidden="true"></div>
+        <div class="bb-code">
+          <label for="code">Beat code</label>
+          <input id="code" type="text" spellcheck="false" autocomplete="off">
+          <div class="bb-actions">
+            <button id="load" class="secondary" type="button">LOAD CODE</button>
+            <button id="copy" class="secondary" type="button">COPY</button>
+            <button id="bounce" type="button">BOUNCE WAV</button>
+          </div>
+          <p class="bb-status" id="status" role="status"></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>Open the page. Hit a pad. That is the whole manual.</span>
+      <span>BB1 code · hex masks · reproducible</span>
+    </footer>
+  </div>
+
+  <script src="beat.js"></script>
+  <script src="voices.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

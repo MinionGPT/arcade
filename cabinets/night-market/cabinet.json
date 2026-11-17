@@ -1,0 +1,27 @@
+{
+  "id": "night-market",
+  "number": 5,
+  "title": "Night market",
+  "visualSteps": [
+    [
+      "click",
+      "#startBtn"
+    ],
+    [
+      "fill",
+      "#offer",
+      "60"
+    ],
+    [
+      "click",
+      "#sendBtn"
+    ],
+    [
+      "click",
+      "#walkBtn"
+    ]
+  ],
+  "hookClasses": [
+    "receipt-dl"
+  ]
+}

@@ -1,0 +1,19 @@
+/* Cabinet 12 — PLATE 777. House palette only: ink, thermal cream, one brass. */
+
+/* The receipt rows: label left, points right, one dotted rule per rule. */
+.p7-rows { list-style: none; margin: 14px 0 4px; padding: 0; font: 13px/1.4 var(--mono); }
+.p7-rows li { display: flex; justify-content: space-between; gap: 14px; padding: 5px 0; border-bottom: 1px dashed #777365; }
+.p7-rows li span:last-child { font-weight: bold; white-space: nowrap; }
+.receipt #output-line { font: 15px/1.5 var(--mono); margin: 12px 0 0; }
+
+/* The stamp on the receipt. Two classes, one verdict — class names match ui.js. */
+.p7-stamp { font: 30px/1 var(--display); text-transform: uppercase; letter-spacing: .04em; border: 3px double var(--ink); padding: 10px 12px; text-align: center; display: inline-block; transform: rotate(-4deg); background: transparent; color: var(--ink); opacity: .62; border-style: dashed; }
+.p7-stamp-ok { background: var(--gold); color: var(--ink); border-color: var(--ink); opacity: 1; border-style: double; }
+.p7-stamp-cap { background: transparent; color: var(--ink); opacity: .62; border-style: dashed; }
+
+.receipt .p7-stamp { margin: 14px 0 4px; }
+.receipt-actions { margin-top: 14px; }
+.receipt-actions button { width: 100%; }
+.receipt-actions .secondary { color: var(--ink); }
+.receipt-actions .output-copy { margin-top: 10px; }
+.receipt #output-roast { font: 12px/1.45 var(--mono); color: var(--ink); margin: 12px 0 0; border-top: 1px dashed #777365; padding-top: 10px; }

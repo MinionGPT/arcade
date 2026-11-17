@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Receipt Golf / Cabinet 10</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="receipt-golf.css">
+  <script src="engine.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 10 / RECEIPT GOLF</span></header>
+  <main>
+    <div class="cabinet-heading"><span class="eyebrow">Cabinet 10 / the back nine is a batch sheet</span><h1>Receipt Golf</h1><p>Nine fictional batches, one clean save each. Par keeps the batch clean: 15% of the ask. Eagle at 30%, birdie at 20%, and a save under the floor means the vendor walked on you.</p></div>
+    <div class="play-layout">
+      <section class="machine" aria-label="Golf controls">
+        <div class="machine-plate">ONE HOLE. ONE OFFER. ONE STAMP.</div>
+        <form id="golf-form" class="stamp-form">
+          <label for="hole"><span>The batch</span><select id="hole"></select></label>
+          <label for="save"><span>Your offer, in baht</span><input id="save" inputmode="decimal" placeholder="e.g. 280" required></label>
+          <label for="seed"><span>Seed</span><input id="seed" inputmode="numeric" value="777"></label>
+          <button>SETTLE IT ↘</button>
+        </form>
+        <p class="note">Fictional vendors, fictional batches. Nothing here is saved or priced. Par is a receipt rule, not advice.</p>
+        <p id="error" class="error" role="status"></p>
+      </section>
+      <section aria-label="Golf output" aria-live="polite" aria-atomic="true">
+        <div id="result"><div class="receipt receipt-empty"><div class="ghost" aria-hidden="true">?</div><p>AWAITING YOUR OFFER</p><p>Par saves the batch clean at fifteen percent of the ask. Land under the floor and the vendor walks.</p></div></div>
+      </section>
+    </div>
+  </main>
+</div>
+</body>
+</html>

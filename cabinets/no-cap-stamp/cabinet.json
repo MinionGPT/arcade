@@ -1,0 +1,21 @@
+{
+  "id": "no-cap-stamp",
+  "number": 2,
+  "title": "The cap department",
+  "visualSteps": [
+    [
+      "fill",
+      "#claim",
+      "Bangkok has the best pad thai"
+    ],
+    [
+      "fill",
+      "#evidence",
+      "I ate it twice"
+    ],
+    [
+      "click",
+      "#stamp-form button[type=submit]"
+    ]
+  ]
+}

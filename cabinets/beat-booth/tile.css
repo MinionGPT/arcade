@@ -1,0 +1,14 @@
+/* Floor-tile art for Beat Booth. Loaded by the floor page only; the cabinet page uses beat.css. */
+.beat-art { background: #1b1b17; }
+.beat-art::before { content: ''; position: absolute; inset: 16px; border: 1px solid var(--line, #47463d); }
+.beat-grid { display: grid; grid-template-columns: repeat(8, 28px); gap: 6px; position: relative; transform: rotate(-4deg); }
+.beat-grid i { display: block; width: 28px; height: 32px; background: #2a2a24; border: 1px solid #3a392f; }
+.beat-grid i.on { background: var(--gold, #e9be46); border-color: var(--gold, #e9be46); box-shadow: inset 0 0 0 3px #171714; }
+.beat-grid::after { content: ''; position: absolute; top: -8px; bottom: -8px; left: -4px; width: 34px; border: 2px solid var(--paper, #f1e9d6); opacity: 0; }
+.cabinet:hover .beat-grid::after { opacity: 1; animation: beat-sweep 1.2s steps(8) infinite; }
+@keyframes beat-sweep { from { transform: translateX(0); } to { transform: translateX(272px); } }
+@media (max-width: 720px) {
+  .beat-grid { grid-template-columns: repeat(8, 24px); }
+  .beat-grid i { width: 24px; height: 28px; }
+  @keyframes beat-sweep { from { transform: translateX(0); } to { transform: translateX(240px); } }
+}

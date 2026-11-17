@@ -1,0 +1,10 @@
+{
+  "id": "grow-sheet",
+  "number": 7,
+  "title": "777 Minion Farms",
+  "visualSteps": [
+    ["fill", "#seed", "420"],
+    ["click", "#certify-form button"]
+  ],
+  "hookClasses": []
+}

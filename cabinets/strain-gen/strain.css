@@ -1,0 +1,10 @@
+/* Cabinet 04 — Strain drop page styles. Prefixed house classes only. */
+.strain-list { display: flex; flex-direction: column; gap: 14px; margin-top: 18px; }
+.strain { border-top: 1px solid #2a2a24; padding-top: 12px; }
+.strain .rule { color: #5f5c4f; font-weight: bold; letter-spacing: 2px; font-size: 11px; margin: 6px 0; }
+.strain .title { text-transform: uppercase; font-size: 18px; margin-bottom: 6px; font-family: var(--display); letter-spacing: 3px; }
+.strain .row { margin: 6px 0; font-size: 14px; white-space: pre-wrap; }
+.strain .label { color: #5f5c4f; } /* paper receipt: --muted is for ink only */
+@media (max-width: 720px) {
+  .strain-list { gap: 12px; }
+}

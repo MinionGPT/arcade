@@ -1,0 +1,46 @@
+/* Cabinet 11 paint: brass stamp when NO CAP, ink when CAP — one accent colour, thermal paper */
+.verdict {
+  font: 28px/1 var(--display);
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 16px 0 24px;
+  text-align: center;
+  border: 3px double var(--ink);
+}
+.pr-stamp-no-cap {
+  background: var(--gold);
+  color: #10100e;
+  border-color: var(--gold);
+  transform: rotate(-6deg);
+}
+.pr-stamp-cap {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+  transform: rotate(-6deg);
+}
+.fine-print {
+  border-top: 1px dashed #777365;
+  padding-top: 16px;
+  font-size: 10px;
+}
+.receipt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+.receipt-actions .ticket-id {
+  font-size: 11px;
+  padding: 10px 14px;
+}
+.receipt blockquote {
+  margin: 24px 0;
+  padding-top: 18px;
+  border-top: 1px dashed #777365;
+  font-size: 13px;
+}
+button {
+  font: 12px/1 var(--display);
+  letter-spacing: .04em;
+}

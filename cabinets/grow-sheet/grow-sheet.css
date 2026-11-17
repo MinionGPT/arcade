@@ -1,0 +1,54 @@
+/* Cabinet 07 — a field certificate, not a dashboard. */
+.gs-page .play-layout { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 54px; }
+.gs-page .cabinet-heading { max-width: 900px; }
+.gs-page .cabinet-heading p { max-width: 660px; }
+.gs-page .machine { border-width: 1px 0 0; padding: 24px 0; }
+.gs-page .machine-plate { text-align: left; border-width: 0 0 1px; padding: 0 0 18px; }
+.gs-page .receipt { padding: 28px 32px 32px; border-top: 6px solid var(--gold); }
+.gs-document { display: flex; justify-content: space-between; gap: 12px; font-size: 9px; letter-spacing: .08em; border-bottom: 1px solid #777365; padding-bottom: 10px; margin-bottom: 24px; }
+.gs-page .receipt-head { border-bottom: 0; padding-bottom: 0; }
+.gs-page .receipt-head strong { font-size: clamp(30px, 3.5vw, 42px); }
+.gs-page .receipt .ticket-id { font: 36px/1.2 var(--display); letter-spacing: .06em; border-block: 1px solid #777365; padding: 16px 0; margin: 22px 0; }
+.gs-label { display: block; font-size: 9px; letter-spacing: .1em; margin-top: 20px; }
+.gs-page .receipt dl { grid-template-columns: 90px minmax(0, 1fr); gap: 8px 14px; }
+.gs-page .receipt dd { text-align: right; }
+.gs-page .receipt blockquote { border-top: 0; border-left: 3px solid var(--ink); padding: 0 0 0 16px; font: italic 19px/1.4 Georgia, serif; }
+.gs-replay { font-size: 10px; border-top: 1px dashed #777365; padding-top: 20px; margin-top: 24px; }
+@media (max-width: 720px) {
+  .gs-page .play-layout { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .gs-page .receipt { padding: 22px 18px; }
+}
+@media print {
+  .gs-page .receipt { print-color-adjust: exact; -webkit-print-color-adjust: exact; break-inside: avoid; }
+  .gs-page .receipt::after { display: none; }
+}
+
+
+.gs-terps { margin: 16px 0 6px; padding: 0; list-style: none; }
+.gs-terp {
+  display: grid;
+  grid-template-columns: minmax(96px, 1fr) minmax(60px, 2fr) 52px;
+  gap: 10px;
+  align-items: center;
+  padding: 7px 0;
+  font-size: 12px;
+  color: var(--ink);
+}
+.gs-terp-name { text-transform: uppercase; letter-spacing: .06em; }
+.gs-pct { text-align: right; font-weight: bold; color: #55503f; }
+.gs-bar { display: block; height: 10px; background: #ddd5c0; box-shadow: inset 0 0 0 1px #b6ad97; }
+.gs-bar-fill { display: block; height: 100%; background: #8a7d55; }
+.gs-top .gs-terp-name { font-weight: bold; }
+.gs-top .gs-bar-fill { background: var(--gold); }
+
+.gs-stamp {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 10px 18px;
+  font: 20px/1 var(--display);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+.gs-cap { border: 3px double var(--ink); color: var(--ink); background: transparent; }
+.gs-nocap { border: 3px double var(--ink); background: var(--gold); color: var(--ink); }

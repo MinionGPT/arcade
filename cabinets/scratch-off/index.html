@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trip 777 Scratch / Minion Arcade</title>
+  <link rel="stylesheet" href="../../assets/arcade.css">
+  <link rel="stylesheet" href="scratch.css">
+  <script src="engine.js" defer></script>
+  <script src="../../assets/receipt.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="../../index.html"><b>777</b> BACK TO THE FLOOR</a><span class="quiet">CABINET 06 / TRIP 777 SCRATCH</span></header>
+  <main>
+    <div class="cabinet-heading">
+      <span class="eyebrow">Cabinet 06 / Cheaper than the slot, trashier than the truth</span>
+      <h1>Trip 777 Scratch</h1>
+      <p>Nine panels, one lucky digit, no coin slot. The lucky number is the seed&rsquo;s own digit; the card is seeded, so the same ticket on the same seed is the same card every time. Pretend baht. Nothing is sent anywhere.</p>
+    </div>
+    <div class="play-layout">
+      <section class="machine so-machine" aria-label="Scratch controls">
+        <div class="machine-plate">TICKET COUNTER &mdash; PAYS IN PRETEND BAHT</div>
+        <form id="start-form" class="so-start">
+          <div class="so-fields">
+            <label for="seed"><span>Seed (same seed, same card)</span><input id="seed" type="number" min="0" step="1" value="777" required></label>
+            <label for="ticket"><span>Ticket #</span><input id="ticket" type="number" min="1" step="1" value="42"></label>
+          </div>
+          <label class="so-check"><span>Random ticket</span><input id="rand" type="checkbox" checked></label>
+          <button id="startBtn">BUY A TICKET &nearr;</button>
+        </form>
+        <div id="scratch-area" class="so-scratch" hidden>
+          <div class="so-strip">
+            <p id="lucky-plate" class="so-lucky">LUCKY NUMBER <b>?</b></p>
+            <p id="progress" class="so-progress">0 / 9 scratched</p>
+          </div>
+          <p class="so-instruction">Tap or press Enter on a panel to scratch it. The receipt only prints when all nine are gone.</p>
+          <div id="grid" class="so-grid" role="group" aria-label="Nine scratch panels"></div>
+          <div class="so-actions">
+            <button id="revealBtn" class="secondary" type="button">REVEAL ALL</button>
+            <button id="newBtn" class="secondary" type="button">NEW TICKET</button>
+          </div>
+        </div>
+        <p id="status" class="so-status">Set a seed and buy a ticket.</p>
+        <p id="error" class="error so-error" role="status"></p>
+        <p class="note">Odds come from the engine: 2 matches pays 10B, 3 pays 50B, 4 pays 200B, 5 or more pays 777B. One to one match is the dust. Nothing here has cash value.</p>
+      </section>
+      <section aria-label="Your scratch receipt">
+        <div id="result" class="receipt receipt-empty">
+          <div class="ghost" aria-hidden="true">?</div>
+          <p>AWAITING SCRATCH</p>
+          <p>Buy a ticket and start scratching.</p>
+        </div>
+        <div id="receipt-actions" class="receipt-actions" hidden>
+          <button id="copyBtn" class="secondary" type="button">COPY RECEIPT</button>
+          <button id="linkBtn" class="secondary" type="button">REPLAY LINK</button>
+          <button id="printBtn" class="secondary" type="button">PRINT</button>
+        </div>
+        <p id="copy-status" class="error so-error" role="status"></p>
+        <div id="manual-copy" class="output-copy" hidden>
+          <label for="copy-text"><span>Clipboard blocked? Select and copy this.</span><textarea id="copy-text" readonly></textarea></label>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><span>LUCKY MOTH SAYS: THE HOUSE ALWAYS SCRATCHES LAST.</span><a href="../../index.html">Back to the arcade &nearr;</a></footer>
+</div>
+</body>
+</html>

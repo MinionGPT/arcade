@@ -1,0 +1,10 @@
+{
+  "id": "__ID__",
+  "number": "__NUMBER__",
+  "title": "__TITLE__",
+  "visualSteps": [
+    ["fill", "#input", "Make a tiny good thing."],
+    ["click", "#play-form button"]
+  ],
+  "hookClasses": []
+}
